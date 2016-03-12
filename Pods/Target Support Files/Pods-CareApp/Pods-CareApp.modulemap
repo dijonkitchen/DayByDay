@@ -1,0 +1,6 @@
+framework module Pods_CareApp {
+  umbrella header "Pods-CareApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Care Team-->
+        <scene sceneID="PmY-wk-8Hj">
+            <objects>
+                <viewController id="fVa-xZ-GZm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="soK-AO-eqQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Care Team" image="careteam.png" selectedImage="careteam" id="x8L-AZ-aHQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="td6-Oh-gc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="343"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="TTn-hp-IEt">
+            <objects>
+                <viewController id="IG4-MF-7zz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="POl-nK-HbQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="healthcalendar" id="N0g-dq-kdP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byc-7e-GKM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1326" y="968"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="eEY-5q-zXe">
+            <objects>
+                <viewController id="pHm-gq-Gjr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xbn-W1-jmT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notes" image="healthLog" id="mTC-TH-LH2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVz-8G-YMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="968"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="3ic-1z-cTB">
+            <objects>
+                <tabBarController id="zJX-vG-vhd" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" shadowImage="careteam" id="TO1-5q-JSv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WlP-4E-Pqu" kind="relationship" relationship="viewControllers" id="S5E-hI-GUe"/>
+                        <segue destination="pHm-gq-Gjr" kind="relationship" relationship="viewControllers" id="tv3-fh-qI5"/>
+                        <segue destination="fVa-xZ-GZm" kind="relationship" relationship="viewControllers" id="F7x-q9-m4g"/>
+                        <segue destination="IG4-MF-7zz" kind="relationship" relationship="viewControllers" id="o7g-iY-vrh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gi5-4n-joK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1108" y="21"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="1Sd-9K-THq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WlP-4E-Pqu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Today" image="today.png" id="1FT-jC-7rl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PrD-P6-0jM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kP4-aE-YAJ" kind="relationship" relationship="rootViewController" id="3nU-bF-fT2"/>
+                        <segue destination="kP4-aE-YAJ" kind="modal" id="bfg-VZ-bqk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9g7-NO-kPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="-286"/>
+        </scene>
+        <!--Home Table View Table View Controller-->
+        <scene sceneID="ASN-Ef-e4W">
+            <objects>
+                <tableViewController id="kP4-aE-YAJ" customClass="HomeTableViewTableViewController" customModule="CareApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" id="cYB-jE-LYk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="99" id="2yj-NL-ZN1">
+                                <rect key="frame" x="0.0" y="28" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2yj-NL-ZN1" id="hoY-xr-4mq">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Primary Doctor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IkP-lQ-uYs">
+                                            <rect key="frame" x="116" y="14" width="174" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="IGR-17-D0f">
+                                            <rect key="frame" x="8" y="7" width="85" height="84"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0mW-8O-xIB">
+                                <rect key="frame" x="0.0" y="127" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0mW-8O-xIB" id="HoE-xS-tRQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Nurse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iCm-LV-e3h">
+                                            <rect key="frame" x="168" y="14" width="90" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6Vu-eu-bdI">
+                                            <rect key="frame" x="8" y="5" width="86" height="85"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ARh-5j-US9">
+                                <rect key="frame" x="0.0" y="226" width="320" height="99"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ARh-5j-US9" id="FQ0-Zw-9Yt">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Tech" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5xa-Pq-qyl">
+                                            <rect key="frame" x="137" y="8" width="137" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2rr-uH-BsZ">
+                                            <rect key="frame" x="8" y="7" width="86" height="83"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="189" id="yQz-55-8vs">
+                                <rect key="frame" x="0.0" y="325" width="320" height="189"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yQz-55-8vs" id="2Or-K9-CyQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats Happening Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1lS-VO-ql9">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="188"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kP4-aE-YAJ" id="YPC-x0-wnT"/>
+                            <outlet property="delegate" destination="kP4-aE-YAJ" id="Tkj-dz-NI0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jeU-sP-mC0"/>
+                    <connections>
+                        <outlet property="MyNurseImg" destination="6Vu-eu-bdI" id="6Pa-S6-NJk"/>
+                        <outlet property="MyPrimaryDoctorImg" destination="IGR-17-D0f" id="lyt-FF-N64"/>
+                        <outlet property="MytechImg" destination="2rr-uH-BsZ" id="gYZ-f9-ngW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xO-I4-Y1D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2217" y="-284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="careteam" width="35" height="35"/>
+        <image name="careteam.png" width="35" height="35"/>
+        <image name="healthLog" width="34" height="34"/>
+        <image name="healthcalendar" width="35" height="35"/>
+        <image name="today.png" width="35" height="35"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bfg-VZ-bqk"/>
+    </inferredMetricsTieBreakers>
+</document>
