@@ -22,6 +22,8 @@
 		47A80C211C94D25F003ED7DE /* HomePageNurseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A80C201C94D25F003ED7DE /* HomePageNurseTableViewCell.swift */; };
 		47A80C231C94D267003ED7DE /* HomePageTechTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A80C221C94D267003ED7DE /* HomePageTechTableViewCell.swift */; };
 		47A80C251C94D2A7003ED7DE /* HomePageScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A80C241C94D2A7003ED7DE /* HomePageScheduleTableViewCell.swift */; };
+		47C104191C9534BD005D23A1 /* notes.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C104171C9534BD005D23A1 /* notes.json */; };
+		47C1041A1C9534BD005D23A1 /* today.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C104181C9534BD005D23A1 /* today.json */; };
 		69FFD8605DDE82B66A3B0500 /* Pods_MyCareTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E83B370F4B4D09450C10DB /* Pods_MyCareTeam.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		47A80C201C94D25F003ED7DE /* HomePageNurseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageNurseTableViewCell.swift; sourceTree = "<group>"; };
 		47A80C221C94D267003ED7DE /* HomePageTechTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageTechTableViewCell.swift; sourceTree = "<group>"; };
 		47A80C241C94D2A7003ED7DE /* HomePageScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		47C104171C9534BD005D23A1 /* notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notes.json; sourceTree = "<group>"; };
+		47C104181C9534BD005D23A1 /* today.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = today.json; sourceTree = "<group>"; };
 		79E83B370F4B4D09450C10DB /* Pods_MyCareTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCareTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +133,8 @@
 		47A80BD71C9480F2003ED7DE /* MyCareTeam */ = {
 			isa = PBXGroup;
 			children = (
+				47C104171C9534BD005D23A1 /* notes.json */,
+				47C104181C9534BD005D23A1 /* today.json */,
 				47A80C191C94B94C003ED7DE /* SwiftyJSON.swift */,
 				47A80BD81C9480F2003ED7DE /* AppDelegate.swift */,
 				47A80BDA1C9480F2003ED7DE /* ViewController.swift */,
@@ -282,6 +288,8 @@
 			files = (
 				47A80BE01C9480F2003ED7DE /* Assets.xcassets in Resources */,
 				47A80BDE1C9480F2003ED7DE /* Main.storyboard in Resources */,
+				47C104191C9534BD005D23A1 /* notes.json in Resources */,
+				47C1041A1C9534BD005D23A1 /* today.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

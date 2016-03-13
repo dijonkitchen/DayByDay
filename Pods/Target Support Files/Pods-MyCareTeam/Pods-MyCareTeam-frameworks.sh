@@ -85,9 +85,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MyCareTeam/Bolts.framework"
+  install_framework "Pods-MyCareTeam/MBCalendarKit.framework"
   install_framework "Pods-MyCareTeam/Parse.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-MyCareTeam/Bolts.framework"
+  install_framework "Pods-MyCareTeam/MBCalendarKit.framework"
   install_framework "Pods-MyCareTeam/Parse.framework"
 fi

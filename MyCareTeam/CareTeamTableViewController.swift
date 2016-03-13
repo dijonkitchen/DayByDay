@@ -17,9 +17,11 @@ class CareTeamTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var practitionerInfo = PractitionerInfo()
         
-        getPractitionerData()   //gets practitioner information per patient
-        getPractitionerImages()
+        practitionerName = practitionerInfo.getPractitionerName()   //gets practitioner information per patient
+        practitionerSpeciality = practitionerInfo.getPractitionerSpecialty()
+        practitionerImages = practitionerInfo.getPractitionerImages()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -28,65 +30,6 @@ class CareTeamTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    private func getPractitionerData() {
-        if let requestURL: NSURL = NSURL(string: "http://fhirtest.uhn.ca/baseDstu2/Practitioner?_count=10")! {
-            if let dataFromJSON = NSData(contentsOfURL: requestURL) {
-                let json = JSON(data: dataFromJSON)
-                
-                for var i = 0; i < json["entry"].count; i++ {
-                    var fullName = ""
-                    var firstName = json["entry"][i]["resource"]["name"]["given"][0].string!
-                    firstName = firstName.lowercaseString
-                    firstName.replaceRange(firstName.startIndex...firstName.startIndex, with: String(firstName[firstName.startIndex]).capitalizedString)
-                    
-                    var lastName = json["entry"][i]["resource"]["name"]["family"][0].string!
-                    lastName = lastName.lowercaseString
-                    lastName.replaceRange(lastName.startIndex...lastName.startIndex, with: String(lastName[lastName.startIndex]).capitalizedString)
-                    
-                    if var prefix = json["entry"][i]["resource"]["name"]["prefix"][0].string {
-                        
-                        prefix = prefix.lowercaseString
-                        prefix.replaceRange(prefix.startIndex...prefix.startIndex, with: String(prefix[prefix.startIndex]).capitalizedString)
-                        
-                        fullName = prefix + ". " + firstName + " " + lastName;
-                    }
-                    else {
-                        fullName = firstName + " " + lastName;
-                    }
-                    practitionerName.append(fullName)
-                    
-                    
-                    if var specialty1 = json["entry"][i]["resource"]["practitionerRole"][0]["specialty"][0]["coding"][0]["display"].string {
-                        specialty1.replaceRange(specialty1.startIndex...specialty1.startIndex, with: String(specialty1[specialty1.startIndex]).capitalizedString)
-
-                        practitionerSpeciality.append(specialty1)
-                    }
-                    else if var specialty2 = json["entry"][i]["resource"]["practitionerRole"][0]["role"]["coding"][0]["display"].string {
-                        specialty2.replaceRange(specialty2.startIndex...specialty2.startIndex, with: String(specialty2[specialty2.startIndex]).capitalizedString)
-
-                        practitionerSpeciality.append(specialty2)
-                    }
-                    else if var specialty3 = json["entry"][i]["resource"]["practitionerRole"][0]["role"]["coding"][0]["code"].string {
-                        specialty3.replaceRange(specialty3.startIndex...specialty3.startIndex, with: String(specialty3[specialty3.startIndex]).capitalizedString)
-                        
-                        practitionerSpeciality.append(specialty3)
-                    }
-                    else {
-                        practitionerSpeciality.append("")
-                    }
-                }
-            }
-        }
-    }
-    
-    private func getPractitionerImages() {
-        
-        let imageNames = ["bmf9001", "cabush", "cblong", "dproye", "edwaldman", "faculty_flomen", "jkfrancis", "ksoren", "lfimundo", "mrm9006"]
-        
-        for var i = 0; i < imageNames.count; i++ {
-            practitionerImages.append(UIImage(named: imageNames[i])!)
-        }
-    }
     
     
     
@@ -166,9 +109,85 @@ class CareTeamTableViewController: UITableViewController {
     
 }
 
+public class PractitionerInfo {
 
+    func getPractitionerName() -> [String] {
+        var practitionerName = [String]()
+        if let requestURL: NSURL = NSURL(string: "http://fhirtest.uhn.ca/baseDstu2/Practitioner?_count=10")! {
+            if let dataFromJSON = NSData(contentsOfURL: requestURL) {
+                let json = JSON(data: dataFromJSON)
+                
+                for var i = 0; i < json["entry"].count; i++ {
+                    var fullName = ""
+                    var firstName = json["entry"][i]["resource"]["name"]["given"][0].string!
+                    firstName = firstName.lowercaseString
+                    firstName.replaceRange(firstName.startIndex...firstName.startIndex, with: String(firstName[firstName.startIndex]).capitalizedString)
+                    
+                    var lastName = json["entry"][i]["resource"]["name"]["family"][0].string!
+                    lastName = lastName.lowercaseString
+                    lastName.replaceRange(lastName.startIndex...lastName.startIndex, with: String(lastName[lastName.startIndex]).capitalizedString)
+                    
+                    if var prefix = json["entry"][i]["resource"]["name"]["prefix"][0].string {
+                        
+                        prefix = prefix.lowercaseString
+                        prefix.replaceRange(prefix.startIndex...prefix.startIndex, with: String(prefix[prefix.startIndex]).capitalizedString)
+                        
+                        fullName = prefix + ". " + firstName + " " + lastName;
+                    }
+                    else {
+                        fullName = firstName + " " + lastName;
+                    }
+                    practitionerName.append(fullName)
+                }
+            }
+        }
+        return practitionerName
+    }
+    
+    func getPractitionerSpecialty() -> [String]{
+        var practitionerSpeciality = [String]()
 
+        if let requestURL: NSURL = NSURL(string: "http://fhirtest.uhn.ca/baseDstu2/Practitioner?_count=10")! {
+            if let dataFromJSON = NSData(contentsOfURL: requestURL) {
+                let json = JSON(data: dataFromJSON)
+                
+                for var i = 0; i < json["entry"].count; i++ {
+                    if var specialty1 = json["entry"][i]["resource"]["practitionerRole"][0]["specialty"][0]["coding"][0]["display"].string {
+                        specialty1.replaceRange(specialty1.startIndex...specialty1.startIndex, with: String(specialty1[specialty1.startIndex]).capitalizedString)
+                        
+                        practitionerSpeciality.append(specialty1)
+                    }
+                    else if var specialty2 = json["entry"][i]["resource"]["practitionerRole"][0]["role"]["coding"][0]["display"].string {
+                        specialty2.replaceRange(specialty2.startIndex...specialty2.startIndex, with: String(specialty2[specialty2.startIndex]).capitalizedString)
+                        
+                        practitionerSpeciality.append(specialty2)
+                    }
+                    else if var specialty3 = json["entry"][i]["resource"]["practitionerRole"][0]["role"]["coding"][0]["code"].string {
+                        specialty3.replaceRange(specialty3.startIndex...specialty3.startIndex, with: String(specialty3[specialty3.startIndex]).capitalizedString)
+                        
+                        practitionerSpeciality.append(specialty3)
+                    }
+                    else {
+                        practitionerSpeciality.append("")
+                    }
+                }
+            }
+        }
+        return practitionerSpeciality
+    }
+    
+    func getPractitionerImages() -> [UIImage] {
+        var practitionerImages = [UIImage]()
 
+        let imageNames = ["bmf9001", "cabush", "cblong", "dproye", "edwaldman", "faculty_flomen", "jkfrancis", "ksoren", "lfimundo", "mrm9006"]
+        
+        for var i = 0; i < imageNames.count; i++ {
+            practitionerImages.append(UIImage(named: imageNames[i])!)
+        }
+        
+        return practitionerImages
+    }
+}
 
 
 
