@@ -13,6 +13,8 @@ class CareTeamMemberCell: UITableViewCell {
     @IBOutlet weak var teamMemberInfo: UIButton!
     @IBOutlet weak var teamMemberName: UILabel!
     @IBOutlet weak var teamMemberPhoto: UIImageView!
+    @IBOutlet weak var teamMemberEncounter: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
