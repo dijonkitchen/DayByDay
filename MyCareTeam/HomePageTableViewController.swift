@@ -10,8 +10,21 @@ import UIKit
 
 class HomePageTableViewController: UITableViewController {
     
+    var practitionerName = [String]()
+    var practitionerSpeciality = [String]()
+    var practitionerImages = [UIImage]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
+        var practitionerInfo = PractitionerInfo()
+        
+        practitionerName = practitionerInfo.getPractitionerName()   //gets practitioner information per patient
+        practitionerSpeciality = practitionerInfo.getPractitionerSpecialty()
+        practitionerImages = practitionerInfo.getPractitionerImages()
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,38 +42,42 @@ class HomePageTableViewController: UITableViewController {
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 3
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 1
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row == 2 {
-            return 300
+            return 500
         }
         else {
-            return tableView.rowHeight
+            return 100
         }
     }
-    
+
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "My Primary Physician"
+        case 1:
+            return "My Nurse"
+        case 2:
+            return "What's Happening Today?"
+        default: return ""
+            
+        }
+        
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var practitionerName = [String]()
-        var practitionerSpeciality = [String]()
-        var practitionerImages = [UIImage]()
-        
-        var practitionerInfo = PractitionerInfo()
-        
-        practitionerName = practitionerInfo.getPractitionerName()   //gets practitioner information per patient
-        practitionerSpeciality = practitionerInfo.getPractitionerSpecialty()
-        practitionerImages = practitionerInfo.getPractitionerImages()
         
         
-        if indexPath.row == 2 {
+        if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath) as! HomePageScheduleTableViewCell
             
             cell.scheduleLabel.text = ""
@@ -97,14 +114,14 @@ class HomePageTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("CareTeamMemberPrimary", forIndexPath: indexPath) as! CareTeamMemberCell
             //2 - doc, 8 - nurse, 3 - tech
             
-            if indexPath.row == 0 { // doctor
+            if indexPath.section == 0 { // doctor
                 cell.teamMemberName.text! = practitionerName[2]
                 cell.teamMemberEncounter.text = practitionerSpeciality[2]
                 cell.teamMemberPhoto.image = practitionerImages[2]
                 cell.teamMemberPhoto.contentMode = UIViewContentMode.ScaleAspectFill
                 
             }
-            else if indexPath.row == 1 { // nurse
+            else if indexPath.section == 1 { // nurse
                 
                 cell.teamMemberName.text! = practitionerName[8]
                 cell.teamMemberEncounter.text = practitionerSpeciality[8]
@@ -118,6 +135,9 @@ class HomePageTableViewController: UITableViewController {
         
     }
     
+    @IBAction func signOut(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("signOutSegue", sender: nil)
+    }
     
     /*
     // Override to support conditional editing of the table view.
