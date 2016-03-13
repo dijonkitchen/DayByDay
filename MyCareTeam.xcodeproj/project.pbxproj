@@ -24,6 +24,8 @@
 		47A80C251C94D2A7003ED7DE /* HomePageScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A80C241C94D2A7003ED7DE /* HomePageScheduleTableViewCell.swift */; };
 		47C104191C9534BD005D23A1 /* notes.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C104171C9534BD005D23A1 /* notes.json */; };
 		47C1041A1C9534BD005D23A1 /* today.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C104181C9534BD005D23A1 /* today.json */; };
+		47C104231C954498005D23A1 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C104221C954498005D23A1 /* CalendarViewController.swift */; };
+		47C3C6CD1C9563A30051375A /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C3C6CA1C9563A30051375A /* ViewController2.swift */; };
 		69FFD8605DDE82B66A3B0500 /* Pods_MyCareTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E83B370F4B4D09450C10DB /* Pods_MyCareTeam.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,8 @@
 		47A80C241C94D2A7003ED7DE /* HomePageScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		47C104171C9534BD005D23A1 /* notes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = notes.json; sourceTree = "<group>"; };
 		47C104181C9534BD005D23A1 /* today.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = today.json; sourceTree = "<group>"; };
+		47C104221C954498005D23A1 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		47C3C6CA1C9563A30051375A /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		79E83B370F4B4D09450C10DB /* Pods_MyCareTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCareTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,8 @@
 				47A80C191C94B94C003ED7DE /* SwiftyJSON.swift */,
 				47A80BD81C9480F2003ED7DE /* AppDelegate.swift */,
 				47A80BDA1C9480F2003ED7DE /* ViewController.swift */,
+				47C104221C954498005D23A1 /* CalendarViewController.swift */,
+				47C3C6CA1C9563A30051375A /* ViewController2.swift */,
 				47A80BDC1C9480F2003ED7DE /* Main.storyboard */,
 				47A80C241C94D2A7003ED7DE /* HomePageScheduleTableViewCell.swift */,
 				47A80C1E1C94D256003ED7DE /* HomePageDoctorTableViewCell.swift */,
@@ -362,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C104231C954498005D23A1 /* CalendarViewController.swift in Sources */,
 				47A80C251C94D2A7003ED7DE /* HomePageScheduleTableViewCell.swift in Sources */,
 				47A80C1F1C94D256003ED7DE /* HomePageDoctorTableViewCell.swift in Sources */,
 				47A80C231C94D267003ED7DE /* HomePageTechTableViewCell.swift in Sources */,
@@ -373,6 +380,7 @@
 				47A80BD91C9480F2003ED7DE /* AppDelegate.swift in Sources */,
 				47A80C211C94D25F003ED7DE /* HomePageNurseTableViewCell.swift in Sources */,
 				47A80C181C94B578003ED7DE /* CareTeamMemberCell.swift in Sources */,
+				47C3C6CD1C9563A30051375A /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +523,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gsv.MyCareTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -531,6 +540,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gsv.MyCareTeam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
