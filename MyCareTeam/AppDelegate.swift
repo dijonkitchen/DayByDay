@@ -21,13 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set applicationId and server based on the values in the Heroku settings.
         // clientKey is not used on Parse open source unless explicitly configured
         
-//        Parse.initializeWithConfiguration(
-//            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
-//                configuration.applicationId = "myAppId"
-//                configuration.clientKey = "sdfl0i93i12938asiakj290312923lawk"
-//                configuration.server = "http://nypediatricmycareteam.herokuapp.com/parse"
-//            })
-//        )
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "myAppId"
+                configuration.clientKey = "sdfl0i93i12938asiakj290312923lawk"
+                configuration.server = "http://nypediatricmycareteam.herokuapp.com/parse"
+            })
+        )
         
         return true
     }
