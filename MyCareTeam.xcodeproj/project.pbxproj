@@ -32,6 +32,19 @@
 		47C3C6DB1C9574B80051375A /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C3C6D71C9574B80051375A /* NoteStore.swift */; };
 		47C3C6DD1C9575780051375A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C3C6DC1C9575780051375A /* Note.swift */; };
 		47C3C6DF1C9585CE0051375A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C3C6DE1C9585CE0051375A /* LoginViewController.swift */; };
+		47C3C6E11C95C57E0051375A /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E01C95C57E0051375A /* events.json */; };
+		47C3C6EE1C95CD990051375A /* doctor-bio-0.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E21C95CD990051375A /* doctor-bio-0.json */; };
+		47C3C6EF1C95CD990051375A /* doctor-bio-1.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E31C95CD990051375A /* doctor-bio-1.json */; };
+		47C3C6F01C95CD990051375A /* doctor-bio-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E41C95CD990051375A /* doctor-bio-2.json */; };
+		47C3C6F11C95CD990051375A /* doctor-bio-3.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E51C95CD990051375A /* doctor-bio-3.json */; };
+		47C3C6F21C95CD990051375A /* doctor-bio-4.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E61C95CD990051375A /* doctor-bio-4.json */; };
+		47C3C6F31C95CD990051375A /* doctor-bio-5.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E71C95CD990051375A /* doctor-bio-5.json */; };
+		47C3C6F41C95CD990051375A /* doctor-bio-6.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E81C95CD990051375A /* doctor-bio-6.json */; };
+		47C3C6F51C95CD990051375A /* doctor-bio-7.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6E91C95CD990051375A /* doctor-bio-7.json */; };
+		47C3C6F61C95CD990051375A /* doctor-bio-8.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6EA1C95CD990051375A /* doctor-bio-8.json */; };
+		47C3C6F71C95CD990051375A /* doctor-bio-9.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6EB1C95CD990051375A /* doctor-bio-9.json */; };
+		47C3C6F81C95CD990051375A /* doctor-bio-10.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6EC1C95CD990051375A /* doctor-bio-10.json */; };
+		47C3C6F91C95CD990051375A /* doctor-bio-11.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C3C6ED1C95CD990051375A /* doctor-bio-11.json */; };
 		69FFD8605DDE82B66A3B0500 /* Pods_MyCareTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79E83B370F4B4D09450C10DB /* Pods_MyCareTeam.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +99,19 @@
 		47C3C6D71C9574B80051375A /* NoteStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
 		47C3C6DC1C9575780051375A /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		47C3C6DE1C9585CE0051375A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		47C3C6E01C95C57E0051375A /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = events.json; sourceTree = "<group>"; };
+		47C3C6E21C95CD990051375A /* doctor-bio-0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-0.json"; sourceTree = "<group>"; };
+		47C3C6E31C95CD990051375A /* doctor-bio-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-1.json"; sourceTree = "<group>"; };
+		47C3C6E41C95CD990051375A /* doctor-bio-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-2.json"; sourceTree = "<group>"; };
+		47C3C6E51C95CD990051375A /* doctor-bio-3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-3.json"; sourceTree = "<group>"; };
+		47C3C6E61C95CD990051375A /* doctor-bio-4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-4.json"; sourceTree = "<group>"; };
+		47C3C6E71C95CD990051375A /* doctor-bio-5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-5.json"; sourceTree = "<group>"; };
+		47C3C6E81C95CD990051375A /* doctor-bio-6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-6.json"; sourceTree = "<group>"; };
+		47C3C6E91C95CD990051375A /* doctor-bio-7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-7.json"; sourceTree = "<group>"; };
+		47C3C6EA1C95CD990051375A /* doctor-bio-8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-8.json"; sourceTree = "<group>"; };
+		47C3C6EB1C95CD990051375A /* doctor-bio-9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-9.json"; sourceTree = "<group>"; };
+		47C3C6EC1C95CD990051375A /* doctor-bio-10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-10.json"; sourceTree = "<group>"; };
+		47C3C6ED1C95CD990051375A /* doctor-bio-11.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "doctor-bio-11.json"; sourceTree = "<group>"; };
 		79E83B370F4B4D09450C10DB /* Pods_MyCareTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCareTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,8 +175,21 @@
 		47A80BD71C9480F2003ED7DE /* MyCareTeam */ = {
 			isa = PBXGroup;
 			children = (
+				47C3C6E21C95CD990051375A /* doctor-bio-0.json */,
+				47C3C6E31C95CD990051375A /* doctor-bio-1.json */,
+				47C3C6E41C95CD990051375A /* doctor-bio-2.json */,
+				47C3C6E51C95CD990051375A /* doctor-bio-3.json */,
+				47C3C6E61C95CD990051375A /* doctor-bio-4.json */,
+				47C3C6E71C95CD990051375A /* doctor-bio-5.json */,
+				47C3C6E81C95CD990051375A /* doctor-bio-6.json */,
+				47C3C6E91C95CD990051375A /* doctor-bio-7.json */,
+				47C3C6EA1C95CD990051375A /* doctor-bio-8.json */,
+				47C3C6EB1C95CD990051375A /* doctor-bio-9.json */,
+				47C3C6EC1C95CD990051375A /* doctor-bio-10.json */,
+				47C3C6ED1C95CD990051375A /* doctor-bio-11.json */,
 				47C104171C9534BD005D23A1 /* notes.json */,
 				47C104181C9534BD005D23A1 /* today.json */,
+				47C3C6E01C95C57E0051375A /* events.json */,
 				47A80C191C94B94C003ED7DE /* SwiftyJSON.swift */,
 				47A80BD81C9480F2003ED7DE /* AppDelegate.swift */,
 				47A80BDA1C9480F2003ED7DE /* ViewController.swift */,
@@ -310,10 +349,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47C3C6F21C95CD990051375A /* doctor-bio-4.json in Resources */,
+				47C3C6F31C95CD990051375A /* doctor-bio-5.json in Resources */,
+				47C3C6F41C95CD990051375A /* doctor-bio-6.json in Resources */,
 				47A80BE01C9480F2003ED7DE /* Assets.xcassets in Resources */,
+				47C3C6F61C95CD990051375A /* doctor-bio-8.json in Resources */,
+				47C3C6F91C95CD990051375A /* doctor-bio-11.json in Resources */,
+				47C3C6F71C95CD990051375A /* doctor-bio-9.json in Resources */,
 				47A80BDE1C9480F2003ED7DE /* Main.storyboard in Resources */,
+				47C3C6F01C95CD990051375A /* doctor-bio-2.json in Resources */,
+				47C3C6EE1C95CD990051375A /* doctor-bio-0.json in Resources */,
+				47C3C6E11C95C57E0051375A /* events.json in Resources */,
+				47C3C6F81C95CD990051375A /* doctor-bio-10.json in Resources */,
+				47C3C6EF1C95CD990051375A /* doctor-bio-1.json in Resources */,
+				47C3C6F51C95CD990051375A /* doctor-bio-7.json in Resources */,
 				47C104191C9534BD005D23A1 /* notes.json in Resources */,
 				47C1041A1C9534BD005D23A1 /* today.json in Resources */,
+				47C3C6F11C95CD990051375A /* doctor-bio-3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

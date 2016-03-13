@@ -17,8 +17,10 @@ class ViewController2: UIViewController {
 //    @IBOutlet weak var daysOutSwitch: UISwitch!
 //    
 
-    
-    
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
     
     
     @IBOutlet weak var monthLabel: UILabel!
@@ -34,7 +36,11 @@ class ViewController2: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        label2.text = "8:00 AM: Head CT - Neuroradiology"
+        label1.text = "2:00 PM: Echocardiogram - Ultrasound Room"
+        label3.text = "4:00 PM: Clown Care Rounds - Room 2T"
+        label4.text = "6:30 PM: Arts & Crafts - Room 3T"
+        
         monthLabel.text = CVDate(date: NSDate()).globalDescription
     }
 
@@ -82,10 +88,49 @@ extension ViewController2: CVCalendarViewDelegate, CVCalendarMenuViewDelegate {
     }
     
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
+        if dayView.date.commonDescription == "13 March, 2016" {
+
+            label2.text = "8:00 AM: Head CT - Neuroradiology"
+            label1.text = "2:00 PM: Echocardiogram - Ultrasound Room"
+            label3.text = "4:00 PM: Clown Care Rounds - Room 2T"
+            label4.text = "6:30 PM: Arts & Crafts - Room 3T"
+            
+        }
+        else if dayView.date.commonDescription == "14 March, 2016"{
+            label2.text = "5:00 PM: Music Therapy - Patient Rooms"
+            label1.text =  "7:00 PM: Pet Therapy - 4T Playroom"
+            label3.text = ""
+            label4.text = ""
+        }
+            
+        else if dayView.date.commonDescription == "15 March, 2016"{
+            label2.text = "8:00 PM: Big Apple Circus - Patient Rooms"
+            label1.text =  "9:00 PM: Pet Therapy - 4T Playroom"
+            label3.text = ""
+            label4.text = ""
+
+
+        }
+        else if dayView.date.commonDescription == "17 March, 2016"{
+            label2.text = "3:00 PM: Arts & Crafts - 6T Playroom"
+            label3.text = ""
+            label4.text = ""
+            label1.text = ""
+
+
+        }
+        else {
+            label1.text = ""
+            label2.text = ""
+            label3.text = ""
+            label4.text = ""
+        }
+        
+    
         print("\(dayView.date.commonDescription) is selected!")
         selectedDay = dayView
     }
-    
+
     func presentedDateUpdated(date: CVDate) {
         if monthLabel.text != date.globalDescription && self.animationFinished {
             let updatedMonthLabel = UILabel()

@@ -61,6 +61,10 @@ class CareTeamTableViewController: UITableViewController {
 
         return cell
     }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+    }
     
     /*
     // Override to support conditional editing of the table view.
@@ -179,7 +183,7 @@ public class PractitionerInfo {
     func getPractitionerImages() -> [UIImage] {
         var practitionerImages = [UIImage]()
 
-        let imageNames = ["bmf9001", "cabush", "cblong", "dproye", "edwaldman", "faculty_flomen", "jkfrancis", "ksoren", "lfimundo", "mrm9006"]
+        let imageNames = ["bmf9001", "dproye", "edwaldman",  "cabush","cblong", "faculty_flomen", "jkfrancis", "ksoren", "lfimundo", "mrm9006"]
         
         for var i = 0; i < imageNames.count; i++ {
             practitionerImages.append(UIImage(named: imageNames[i])!)

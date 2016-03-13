@@ -73,6 +73,8 @@ extension CalendarViewController: CVCalendarViewDelegate, CVCalendarMenuViewDele
     }
     
     func didSelectDayView(dayView: CVCalendarDayView, animationDidFinish: Bool) {
+        
+        
         print("\(dayView.date.commonDescription) is selected!")
         selectedDay = dayView
     }

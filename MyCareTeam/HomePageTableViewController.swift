@@ -18,7 +18,7 @@ class HomePageTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        
         var practitionerInfo = PractitionerInfo()
         
         practitionerName = practitionerInfo.getPractitionerName()   //gets practitioner information per patient
@@ -51,14 +51,14 @@ class HomePageTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row == 2 {
-            return 500
+        if indexPath.section == 2 {
+            return 350
         }
         else {
             return 100
         }
     }
-
+    
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -70,43 +70,34 @@ class HomePageTableViewController: UITableViewController {
         default: return ""
             
         }
-        
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
-        
         if indexPath.section == 2 {
             let cell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath) as! HomePageScheduleTableViewCell
             
-            cell.scheduleLabel.text = ""
-            var events = [String]()
-            events.append("8:00 AM: Blood Draw")
-            events.append("10:00 AM: Head CT")
-            events.append("12:00 PM: Lunch")
-            events.append("4:00 PM: Child Life Event")
-            events.append("6:30 PM: Movie Night")
+//            if let path = NSBundle.mainBundle().pathForResource("events", ofType: "json"),
+//                let dataFromJSON = NSData(contentsOfFile: path) {
+//                    let json = JSON(data: dataFromJSON)
+//        
+//            }
             
-            cell.scheduleLabel.text = events[0]
+            
+            var events = [String]()
+            events.append("8:00 AM: Head CT - Neuroradiology")
+            events.append("2:00 PM: Echocardiogram - Ultrasound Room")
+            events.append("4:00 PM: Clown Care Rounds - Room 2T")
+            events.append("6:30 PM: Arts & Crafts - Room 3T")
+
+            
+            print ("CELL HEIGHT IS: \(cell.frame.height)")
+
+            
+            cell.schedule1.text = events[0]
             cell.schedule2.text = events[1]
             cell.schedule3.text = events[2]
             cell.schedule4.text = events[3]
-            cell.schedule5.text = events[4]
-            
-            
-            
-            
-            //            if let path = NSBundle.mainBundle().pathForResource("countries", ofType: "json"),
-            //                let dataFromJSON = NSData(contentsOfFile: path) {
-            //                    let json = JSON(data: dataFromJSON)
-            //                    print(json)
-            //
-            //                    for var i = 0; i < json["entries"].count; i++ {
-            //                        events.append(json["entries"][i].string!)
-            //                    }
-            //            }
-            
             
             return cell
         }
