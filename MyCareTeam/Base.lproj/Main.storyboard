@@ -212,25 +212,6 @@
             </objects>
             <point key="canvasLocation" x="2613" y="2568"/>
         </scene>
-        <!--Calendar-->
-        <scene sceneID="Mzh-GA-87S">
-            <objects>
-                <viewController id="bxj-qK-i9n" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="c2d-Yx-Dh0"/>
-                        <viewControllerLayoutGuide type="bottom" id="XuJ-Tv-k9U"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8z6-EN-aQI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="healthcalendar" id="PNA-fz-asi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eTC-gT-x9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-202" y="2560"/>
-        </scene>
         <!--Notes-->
         <scene sceneID="56Q-jU-ONH">
             <objects>
@@ -260,10 +241,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="fez-Ul-oBM" kind="relationship" relationship="viewControllers" id="OZn-mQ-8LI"/>
-                        <segue destination="bxj-qK-i9n" kind="relationship" relationship="viewControllers" id="IPu-PW-jfi"/>
-                        <segue destination="MCd-2U-dM1" kind="relationship" relationship="viewControllers" id="Mwz-Dt-TD3"/>
                         <segue destination="BPx-MY-njk" kind="relationship" relationship="viewControllers" id="cGp-gM-sGd"/>
+                        <segue destination="MCd-2U-dM1" kind="relationship" relationship="viewControllers" id="Mwz-Dt-TD3"/>
+                        <segue destination="dhe-ct-pob" kind="relationship" relationship="viewControllers" id="vbr-Hv-jcS"/>
+                        <segue destination="fez-Ul-oBM" kind="relationship" relationship="viewControllers" id="OZn-mQ-8LI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cc3-ch-eEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,6 +435,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hQA-vM-mdf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1199" y="1805"/>
+        </scene>
+        <!--Calendar Appearance Delegate-->
+        <scene sceneID="Ivw-V1-3bt">
+            <objects>
+                <viewController id="dhe-ct-pob" customClass="ViewController2" customModule="MyCareTeam" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vtc-E7-MDF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fvg-J7-E1r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="enr-88-Zhn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="January, 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti5-Yu-1Nc">
+                                <rect key="frame" x="444" y="28" width="136" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CW7-8q-dZw" customClass="CVCalendarMenuView" customModule="CVCalendar">
+                                <rect key="frame" x="20" y="71" width="560" height="24"/>
+                                <connections>
+                                    <outlet property="menuViewDelegate" destination="dhe-ct-pob" id="2dh-ZP-X6X"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJ6-7V-6Dn" customClass="CVCalendarView" customModule="CVCalendar">
+                                <rect key="frame" x="20" y="103" width="560" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Z5U-E3-8ip">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="480"/>
+                                    </constraint>
+                                </constraints>
+                                <connections>
+                                    <outlet property="calendarAppearanceDelegate" destination="dhe-ct-pob" id="Qd7-ka-Y5d"/>
+                                    <outlet property="calendarDelegate" destination="dhe-ct-pob" id="sMW-f8-XJC"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nP-2g-mfJ">
+                                <rect key="frame" x="20" y="25" width="39" height="30"/>
+                                <state key="normal" title="Week">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toWeekView:" destination="dhe-ct-pob" eventType="touchUpInside" id="x5D-v5-VHy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heI-jo-v4F">
+                                <rect key="frame" x="67" y="25" width="44" height="30"/>
+                                <state key="normal" title="Month">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toMonthView:" destination="dhe-ct-pob" eventType="touchUpInside" id="VWo-0u-SWv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogZ-zw-0y0">
+                                <rect key="frame" x="20" y="435" width="580" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LJ6-7V-6Dn" firstAttribute="top" secondItem="enr-88-Zhn" secondAttribute="top" constant="103" id="5h6-m1-n55"/>
+                            <constraint firstItem="ti5-Yu-1Nc" firstAttribute="top" secondItem="vtc-E7-MDF" secondAttribute="bottom" constant="8" symbolic="YES" id="6km-1X-ezT"/>
+                            <constraint firstItem="9nP-2g-mfJ" firstAttribute="leading" secondItem="enr-88-Zhn" secondAttribute="leadingMargin" id="8uY-lH-iQT"/>
+                            <constraint firstItem="heI-jo-v4F" firstAttribute="top" secondItem="vtc-E7-MDF" secondAttribute="bottom" constant="5" id="9To-5c-PYe"/>
+                            <constraint firstItem="LJ6-7V-6Dn" firstAttribute="leading" secondItem="CW7-8q-dZw" secondAttribute="leading" id="Hc0-mX-32Z"/>
+                            <constraint firstItem="ti5-Yu-1Nc" firstAttribute="centerX" secondItem="CW7-8q-dZw" secondAttribute="centerX" id="JMi-Eq-gZh"/>
+                            <constraint firstItem="CW7-8q-dZw" firstAttribute="top" secondItem="heI-jo-v4F" secondAttribute="bottom" constant="16" id="LOx-di-MHq"/>
+                            <constraint firstItem="LJ6-7V-6Dn" firstAttribute="top" secondItem="CW7-8q-dZw" secondAttribute="bottom" constant="8" symbolic="YES" id="OL3-bA-UYk"/>
+                            <constraint firstItem="9nP-2g-mfJ" firstAttribute="top" secondItem="vtc-E7-MDF" secondAttribute="bottom" constant="5" id="QGv-Am-Prg"/>
+                            <constraint firstItem="LJ6-7V-6Dn" firstAttribute="leading" secondItem="enr-88-Zhn" secondAttribute="leadingMargin" id="TRF-3H-FoC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ti5-Yu-1Nc" secondAttribute="trailing" id="V95-Eg-g3v"/>
+                            <constraint firstItem="heI-jo-v4F" firstAttribute="leading" secondItem="9nP-2g-mfJ" secondAttribute="trailing" constant="8" id="eWL-7Y-EOT"/>
+                            <constraint firstItem="LJ6-7V-6Dn" firstAttribute="trailing" secondItem="CW7-8q-dZw" secondAttribute="trailing" id="kcI-Pv-s5y"/>
+                            <constraint firstItem="CW7-8q-dZw" firstAttribute="trailing" secondItem="enr-88-Zhn" secondAttribute="trailingMargin" id="x55-ZS-MvK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JMi-Eq-gZh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="healthcalendar" id="Gyw-Fj-4xE"/>
+                    <connections>
+                        <outlet property="calendarView" destination="LJ6-7V-6Dn" id="Qtb-fL-EtV"/>
+                        <outlet property="menuView" destination="CW7-8q-dZw" id="iTP-Dc-eIU"/>
+                        <outlet property="monthLabel" destination="ti5-Yu-1Nc" id="cID-Ai-6ay"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VSn-mN-txL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258" y="2581"/>
         </scene>
     </scenes>
     <resources>
