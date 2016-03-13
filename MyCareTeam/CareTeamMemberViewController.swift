@@ -16,7 +16,9 @@ class CareTeamMemberViewController: UIViewController {
     @IBOutlet weak var careTeamMemberPhoto: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +27,6 @@ class CareTeamMemberViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -35,5 +36,4 @@ class CareTeamMemberViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

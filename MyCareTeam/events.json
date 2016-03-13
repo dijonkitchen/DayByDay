@@ -1,0 +1,74 @@
+{
+    "_id": {
+        "$oid": "56e581afe4b020c62ef3a2f9"
+    },
+    "hospital-events-date": [
+        {
+            "03132016": [
+                {
+                    "4:00 PM": "Clown Care Rounds - Patient rooms"
+                }
+            ]
+        },
+        {
+            "03152016": [
+                {
+                    "8:00 PM": "Big Apple Circus - Patient rooms"
+                },
+                {
+                    "9:00 PM": "Pet Therapy - 4T Playroom"
+                }
+            ]
+        },
+        {
+            "03192016": [
+                {
+                    "3:00 PM": "Arts & Crafts - 6T Playroom"
+                }
+            ]
+        },
+        {
+            "03212016": [
+                {
+                    "8:00 PM": "Snowflake-making"
+                }
+            ]
+        },
+        {
+            "03242016": [
+                {
+                    "8:00 PM": "Nutcracker Ballet - Julliard School of Arts"
+                }
+            ]
+        }
+    ],
+    "03132016": [
+        {
+            "8:00 AM": [
+                {
+                    "Event": "Head CT"
+                },
+                {
+                    "Location": "Neuroradiology"
+                }
+            ]
+        },
+        {
+            "10:00 AM": [
+                {
+                    "Event": "Blood Draw"
+                }
+            ]
+        },
+        {
+            "2:00 PM": [
+                {
+                    "Event": "Echocardiogram"
+                },
+                {
+                    "Location": "Ultrasound Room 1"
+                }
+            ]
+        }
+    ]
+}

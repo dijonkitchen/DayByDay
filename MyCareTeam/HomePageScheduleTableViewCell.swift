@@ -10,7 +10,11 @@ import UIKit
 
 class HomePageScheduleTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var scheduleLabel: UILabel!
+    @IBOutlet weak var schedule1: UILabel!
+    @IBOutlet weak var schedule2: UILabel!
+    @IBOutlet weak var schedule3: UILabel!
+    @IBOutlet weak var schedule4: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

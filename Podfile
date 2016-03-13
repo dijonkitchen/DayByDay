@@ -5,6 +5,8 @@ use_frameworks!
 
 target 'MyCareTeam' do
    pod 'Parse'
+   pod 'CVCalendar', '~> 1.2.9'
+
 end
 
 target 'MyCareTeamTests' do
